@@ -3,7 +3,7 @@ import "./styles/app.scss";
 const App = () => {
   return (
     <div className="container">
-      <h1 className="name">your friendly neighborhood youka</h1>
+      <p>TODO: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features</p>
     </div>
   );
 };
