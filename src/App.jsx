@@ -1,10 +1,18 @@
-import "./styles/app.scss";
+import { useState, useEffect } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import axios from 'axios';
+
+import DiscordCard from './components/DiscordCard';
+
+import './styles/app.scss';
 
 const App = () => {
   return (
-    <div className="container">
-      <p>TODO: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features</p>
-    </div>
+    <ChakraProvider resetCSS>
+      <div className='container'>
+        <DiscordCard />
+      </div>
+    </ChakraProvider>
   );
 };
 
