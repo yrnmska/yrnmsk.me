@@ -90,6 +90,7 @@ const App = (props) => {
       <h2 id='list-heading' tabIndex='-1' ref={listHeadingRef}>
         {headingText}
       </h2>
+      {/* eslint-disable-next-line jsx-a11y/no-redundant-roles */}
       <ul
         role='list'
         className='todo-list stack-large stack-exception'
