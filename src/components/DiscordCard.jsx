@@ -17,7 +17,7 @@ const DiscordCard = () => {
       borderRadius={10}
     >
       <Avatar
-        src='https://dcdn.dstn.to/avatars/90431685472038912'
+        src='https://dcdn.dstn.to/avatars/239381559482777600'
         name='Aai0590'
         display='flex'
         mt={5}
@@ -28,8 +28,8 @@ const DiscordCard = () => {
       >
         <AvatarBadge bg='green.500' boxSize='1.25rem' borderColor='white' />
       </Avatar>
-      <Nickname name='Zai' />
-      <Username username='Aai' discriminator='0590' />
+      <Nickname name='Youka' />
+      <Username username='youka' discriminator='0083' />
       <Divider
         borderColor='#262729'
         mt={2}
