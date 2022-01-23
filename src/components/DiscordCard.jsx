@@ -37,7 +37,7 @@ const DiscordCard = () => {
         display='block'
         orientation='horizontal'
       />
-      <AboutMe bio='i love chaeyoung' />
+      <AboutMe />
     </Container>
   );
 };
@@ -59,7 +59,7 @@ const AboutMe = ({ bio }) => (
     <Text color='#B9BBBE' fontWeight='bold' mb={0.7}>
       ABOUT ME
     </Text>
-    <Text color='#B7B7B8'>{bio}</Text>
+    <Text color='#B7B7B8'>{bio || 'bio not found'}</Text>
   </>
 );
 
