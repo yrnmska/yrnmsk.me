@@ -18,7 +18,7 @@ const DiscordCard = () => {
     >
       <Avatar
         src='https://dcdn.dstn.to/avatars/239381559482777600'
-        name='Aai0590'
+        name='youka#0083'
         display='flex'
         mt={5}
         borderRadius={50}
