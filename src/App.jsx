@@ -1,10 +1,15 @@
-import "./styles/app.scss";
+import { ChakraProvider } from '@chakra-ui/react';
+import DiscordCard from './components/DiscordCard';
+
+import './styles/app.scss';
 
 const App = () => {
   return (
-    <div className="container">
-      <h1 className="name">your friendly neighborhood youka</h1>
-    </div>
+    <ChakraProvider resetCSS>
+      <div className='container'>
+        <DiscordCard />
+      </div>
+    </ChakraProvider>
   );
 };
 
