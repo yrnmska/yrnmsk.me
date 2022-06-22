@@ -6,6 +6,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import axios from 'axios';
+
+import { useEffect, useState } from 'react';
+
+const YOUKA = '239381559482777600';
+
 const DiscordCard = () => {
   return (
     <Container
@@ -17,7 +23,7 @@ const DiscordCard = () => {
       borderRadius={10}
     >
       <Avatar
-        src='https://dcdn.dstn.to/avatars/239381559482777600'
+        src={`https://dcdn.dstn.to/avatars/${YOUKA}`}
         name='youka#0083'
         display='flex'
         mt={5}
@@ -54,13 +60,23 @@ const Username = ({ username, discriminator }) => (
   </Text>
 );
 
-const AboutMe = ({ bio }) => (
-  <>
-    <Text color='#B9BBBE' fontWeight='bold' mb={0.7}>
-      ABOUT ME
-    </Text>
-    <Text color='#B7B7B8'>{bio || 'bio not found'}</Text>
-  </>
-);
+const AboutMe = () => {
+  const [bio, setBio] = useState('');
+
+  useEffect(() => {
+    axios.get(`https://dcdn.dstn.to/profile/${YOUKA}`).then((res) => {
+      setBio(res.data.user.bio);
+    });
+  }, []);
+
+  return (
+    <>
+      <Text color='#B9BBBE' fontWeight='bold' mb={0.7}>
+        ABOUT ME
+      </Text>
+      <Text color='#B7B7B8'>{bio || 'bio not found'}</Text>
+    </>
+  );
+};
 
 export default DiscordCard;
